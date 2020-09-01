@@ -3,7 +3,7 @@
 [![N|Solid](https://cdn-media-1.freecodecamp.org/images/YPGVGgxYKzPpRZzTZIgfWgTvQ4T0E8zaLpkZ)](https://expressjs.com/)
 
 
-Online Shop API build with express JS
+Coffe Shop API build with express JS
 
 # Features!
 
