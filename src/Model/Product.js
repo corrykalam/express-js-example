@@ -44,7 +44,6 @@ Product.Search = (name, sensitive = "false") => {
             database.query(`SELECT * FROM product WHERE lower(name) LIKE lower('${name}%');`)
                 .then(res => resolve(res))
                 .catch(err => reject(err))
-
         } else {
             database.query(`SELECT * FROM product WHERE lower(name) LIKE lower('%${name}%');`)
                 .then(res => resolve(res))
