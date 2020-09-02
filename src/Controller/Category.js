@@ -12,8 +12,8 @@ Category.all = async (req, res) => {
 
 Category.add = async (req, res) => {
     try {
-        const { id, name } = req.body
-        const data = await model.Add(id, name)
+        const { name } = req.body
+        const data = await model.Add(name)
         return res.status(200).json({ success: true })
     } catch (error) {
         return res.status(500).json(error.routine)

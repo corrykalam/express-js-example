@@ -12,8 +12,8 @@ History.all = async (req, res) => {
 
 History.add = async (req, res) => {
     try {
-        const { invoice, date, orders, amount } = req.body
-        const data = await model.Add(invoice, date, orders, amount)
+        const { invoice, date, orders, amount, cashier } = req.body
+        const data = await model.Add(invoice, date, orders, amount, cashier)
         return res.status(200).json({ success: true })
     } catch (error) {
         return res.status(500).json(error.routine)
