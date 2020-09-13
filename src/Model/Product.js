@@ -13,6 +13,18 @@ Product.GetAll = () => {
             })
     })
 }
+Product.Detail = (id) => {
+    return new Promise((resolve, reject) => {
+        database
+            .query(`SELECT * FROM product WHERE id=${id};`)
+            .then((res) => {
+                resolve(res)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
+}
 
 Product.Add = (name, image, price, category) => {
     return new Promise((resolve, reject) => {

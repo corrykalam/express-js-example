@@ -1,9 +1,12 @@
 const model = require("../Model/History")
+// const redis = require("../Config/Redis")
 const History = {}
 
 History.all = async (req, res) => {
     try {
         const data = await model.GetAll()
+        // const data_redis = JSON.stringify(data)
+        // redis.setex("productAll", 30, data_redis)
         return res.status(200).json(data)
     } catch (error) {
         return res.status(500).json(error)
