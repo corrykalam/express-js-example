@@ -14,6 +14,7 @@ server.use(bodyParser.urlencoded({ extended: false }))
 server.use(bodyParser.json())
 server.use(morgan("dev"))
 server.use(cors())
+server.use("/public", express.static("public"))
 
 server.use(routes)
 
