@@ -31,7 +31,7 @@ Product.detail = async (req, res) => {
 Product.add = async (req, res) => {
     try {
         if (req.file === undefined) {
-            return res.status(500).json({ status: false, message: "wrong params." })
+            return res.status(500).json({ status: false, message: "file not found." })
         }
         const { name, price, category } = req.body
         const image = req.file.path

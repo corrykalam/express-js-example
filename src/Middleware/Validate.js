@@ -17,7 +17,6 @@ module.exports = function (...role) {
             try {
                 if (err) {
                     if (err.message == "jwt expired") {
-                        console.log(err)
                         const detailUsers = await model.getDetail(jwtData.username)
                         if (token == detailUsers[0].token) {
                             const payload = {
