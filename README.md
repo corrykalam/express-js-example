@@ -12,6 +12,8 @@ Coffe Shop API build with express JS
 ### Build with:
 * [node.js] - evented I/O for the backend
 * [Express] - fast node.js network app framework
+* [Jwt] - Jsonwebtoken for secure authentication
+* [Multer] - Middleware to handle multipart/form-data requests
 ### Installation
 
 ```sh

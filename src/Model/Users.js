@@ -68,7 +68,7 @@ Users.Delete = (idUsers) => {
 
 Users.genToken = async (payload) => {
     try {
-        const token = jwt.sign(payload, process.env.JWT_KEYS, { expiresIn: 10 })
+        const token = jwt.sign(payload, process.env.JWT_KEYS, { expiresIn: 30 })
         return token
     } catch (err) {
         throw err
